@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我們 | 翔禾腦科學與身體機能整合中心</title>
+  <meta name="description" content="預約翔禾腦科學與身體機能整合中心的免費諮詢，了解神經回饋、兒童專注力課程等療程服務。" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .form-success {
+      display: none;
+      background: linear-gradient(135deg, rgba(76,175,140,0.1), rgba(13,92,115,0.1));
+      border: 1px solid rgba(76,175,140,0.3);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    .form-success-icon {
+      font-size: 3.5rem;
+      margin-bottom: 16px;
+    }
+
+    .form-success h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .form-success p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .faq-question:hover {
+      background: var(--bg-section);
+    }
+
+    .faq-icon {
+      font-size: 1.1rem;
+      transition: var(--transition);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 導覽列 -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.7 3 6.1V17h8v-1.9c1.8-1.4 3-3.6 3-6.1 0-4-3-7-7-7z"/>
+              <path d="M9 17v2h6v-2"/><path d="M10 21h4"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">翔禾腦波分析中心</span>
+            <span class="logo-en">Brain Science & Body Integration</span>
+          </div>
+        </a>
+        <ul class="navbar-nav" id="navMenu">
+          <li><a href="index.html" class="nav-link">首頁</a></li>
+          <li><a href="about.html" class="nav-link">中心介紹</a></li>
+          <li><a href="services.html" class="nav-link">服務項目</a></li>
+          <li><a href="children-program.html" class="nav-link">兒童課程</a></li>
+          <li><a href="neurofeedback.html" class="nav-link">神經回饋</a></li>
+          <li><a href="contact.html" class="nav-link active navbar-cta">立即預約</a></li>
+        </ul>
+        <button class="navbar-toggle" id="navToggle" aria-label="開啟選單">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面 Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-content">
+        <nav class="breadcrumb">
+          <a href="index.html">首頁</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>聯絡我們</span>
+        </nav>
+        <h1 class="page-banner-title">開始您的<br/>療癒旅程</h1>
+        <p class="page-banner-desc">
+          預約免費諮詢，讓我們的專業團隊為您量身規劃最適合的療程方案
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡表單 -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- 聯絡資訊 -->
+        <div class="contact-info fade-in">
+          <div>
+            <span class="section-tag">聯絡資訊</span>
+            <h2 class="section-title" style="font-size: 1.8rem; text-align: left; margin-top: 12px;">我們隨時<br/>歡迎您的來訪</h2>
+            <div class="section-divider" style="margin: 20px 0 0;"></div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-title">診所地址</div>
+              <div class="contact-info-value">
+                翔禾國際醫療<br/>
+                請聯絡我們以獲取確切地址
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📞</div>
+            <div>
+              <div class="contact-info-title">預約電話</div>
+              <div class="contact-info-value">
+                歡迎來電預約諮詢<br/>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">（請填寫表單，我們將主動聯繫您）</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <div class="contact-info-title">電子信箱</div>
+              <div class="contact-info-value">
+                歡迎寄信詢問<br/>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">我們通常在 1 個工作天內回覆</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <div class="contact-info-title">服務時間</div>
+              <div class="contact-info-value">
+                週一至週六：09:00 – 18:00<br/>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">週日及國定假日：休診</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, rgba(13,92,115,0.06), rgba(76,175,140,0.06)); border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--border);">
+            <div style="font-weight: 700; color: var(--text-dark); margin-bottom: 10px; font-size: 0.95rem;">💡 諮詢前請準備</div>
+            <ul style="display: flex; flex-direction: column; gap: 8px;">
+              <li style="font-size: 0.85rem; color: var(--text-muted); padding-left: 14px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--accent);">•</span>孩子目前的學校狀況與主要困擾
+              </li>
+              <li style="font-size: 0.85rem; color: var(--text-muted); padding-left: 14px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--accent);">•</span>過去是否接受過相關評估或治療
+              </li>
+              <li style="font-size: 0.85rem; color: var(--text-muted); padding-left: 14px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--accent);">•</span>您希望達成的目標或改善的方向
+              </li>
+              <li style="font-size: 0.85rem; color: var(--text-muted); padding-left: 14px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--accent);">•</span>可參與課程的時間安排
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 預約表單 -->
+        <div class="fade-in fade-in-delay-1">
+          <div class="contact-form" id="contactFormWrapper">
+            <div style="margin-bottom: 28px;">
+              <h3 style="font-family: 'Noto Serif TC', serif; font-size: 1.4rem; color: var(--text-dark); margin-bottom: 8px;">預約免費諮詢</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">填寫以下資訊，我們的專業顧問將在 1 個工作天內與您聯繫。</p>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">您的姓名 *</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="請輸入您的姓名" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">聯絡電話 *</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="例：0912-345-678" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">電子信箱</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="service">您感興趣的服務 *</label>
+                <select id="service" name="service" class="form-select" required>
+                  <option value="" disabled selected>請選擇服務項目</option>
+                  <option value="children">兒童專注力整合課程</option>
+                  <option value="neurofeedback">神經回饋療程</option>
+                  <option value="eeg">腦波狀態檢測</option>
+                  <option value="bioscan">AI高維生物掃描</option>
+                  <option value="hydrogen">H2 腦屏障修復矩陣</option>
+                  <option value="cognitive">潛意識認知解碼</option>
+                  <option value="family-resonance">親子腦波共振陪跑</option>
+                  <option value="other">其他（請在留言說明）</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="childAge">（兒童課程）孩子年齡</label>
+                  <input type="text" id="childAge" name="childAge" class="form-input" placeholder="例：8 歲" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="preferTime">希望聯絡時間</label>
+                  <select id="preferTime" name="preferTime" class="form-select">
+                    <option value="" disabled selected>請選擇</option>
+                    <option value="morning">上午 09:00–12:00</option>
+                    <option value="afternoon">下午 13:00–17:00</option>
+                    <option value="evening">傍晚 17:00–18:00</option>
+                    <option value="anytime">任何時間皆可</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">您的問題或需求</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="請描述您目前的狀況、主要困擾，或您對療程的任何問題……"></textarea>
+              </div>
+
+              <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
+                <input type="checkbox" id="agree" name="agree" required style="margin-top: 3px; flex-shrink: 0; cursor: pointer;" />
+                <label for="agree" style="font-size: 0.82rem; color: var(--text-muted); cursor: pointer; line-height: 1.6;">
+                  我同意翔禾腦波分析中心收集並使用我提供的資訊，以便安排諮詢服務。我的資訊將受到妥善保護，不會對外分享。
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 16px 32px;" id="submitBtn">
+                <span id="submitText">送出預約申請</span>
+              </button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+              <div class="form-success-icon">✅</div>
+              <h3>您的申請已收到！</h3>
+              <p>
+                感謝您預約翔禾腦波分析中心的諮詢服務。<br/>
+                我們的專業顧問將在 1 個工作天內與您聯繫，<br/>
+                期待與您共同開始您的身心療癒旅程。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="content-section" style="background: var(--bg-section);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">常見問題</span>
+        <h2 class="section-title">您可能想知道的事</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>神經回饋療法安全嗎？有副作用嗎？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            神經回饋是一種完全非侵入性的療法，不需要任何藥物，也不對大腦施加任何電流或磁場。
+            它只是「讀取」您的腦波並提供回饋，由您的大腦自主學習調整。
+            目前研究顯示神經回饋非常安全，少數人在訓練初期可能有輕微的疲倦感，這是正常的適應反應，休息後即可恢復。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>兒童多大年齡可以參加課程？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            我們的兒童專注力整合課程主要針對學齡兒童（約 5–16 歲）。
+            具體的適合年齡會根據孩子的發展狀況和課程類型而有所不同。
+            建議您先預約免費諮詢，讓我們的專業顧問根據孩子的具體情況給予個人化建議。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>12週課程需要每週都來嗎？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            標準方案為每週一次，每次 90 分鐘，持續 12 週。
+            規律的訓練頻率對神經可塑性的形成非常重要，建議盡量維持每週到課。
+            如果因特殊情況無法出席，課程提供線上雲端帳號補課功能，確保您不會錯過任何學習內容。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>多久可以看到效果？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            每個人的大腦反應速度不同，有些人在 3–4 次訓練後就能感受到變化，
+            例如睡眠改善、情緒更穩定、專注力提升等。
+            一般而言，完整的 12 週課程後會有較明顯的持久改善。
+            由於神經回饋利用神經可塑性，效果通常是持久的，而非停止訓練後就消失。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>我可以同時繼續使用藥物嗎？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            可以。神經回饋療法可以與現有的醫療方案並行使用。
+            許多參加我們課程的孩子一開始仍在服用藥物，隨著訓練進展，一些家長與醫師合作後逐漸調整用藥。
+            任何藥物調整都應在醫師的指導下進行，我們不建議在未諮詢主治醫師的情況下自行停藥。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>免費諮詢包含哪些內容？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            免費諮詢約 30–45 分鐘，包含：
+            聆聽您或孩子目前的狀況與需求、
+            解答您對各項療程的疑問、
+            說明適合的療程方案與預期效果、
+            以及提供初步的個人化建議。
+            我們的顧問會用心了解您的情況，確保您對我們的服務有充分了解後再做決定。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>大人也可以接受神經回饋療程嗎？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            當然可以！神經回饋療法對各年齡層都有效，包含成人。
+            成人常見的應用包含：工作壓力與焦慮管理、睡眠品質改善、
+            運動或工作的峰值表現提升、創傷後壓力（PTSD）的支持性療程等。
+            歡迎預約諮詢，我們會根據您的個人需求設計合適方案。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 快速聯絡 CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2 class="cta-title">還有其他問題？</h2>
+        <p class="cta-subtitle">
+          我們的專業顧問隨時準備好回答您的問題，<br/>
+          讓我們一起找到最適合您的療癒之路。
+        </p>
+        <div class="cta-actions">
+          <a href="#contactForm" class="btn btn-gold">立即填寫預約表單</a>
+          <a href="services.html" class="btn btn-secondary">查看服務項目</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.7 3 6.1V17h8v-1.9c1.8-1.4 3-3.6 3-6.1 0-4-3-7-7-7z"/>
+                <path d="M9 17v2h6v-2"/><path d="M10 21h4"/>
+              </svg>
+            </div>
+            <span class="footer-logo-text">翔禾腦科學與身體機能整合中心</span>
+          </div>
+          <p class="footer-desc">以整合醫學視角，結合神經回饋科技與多元療法，幫助每一位前來的客戶體驗生命的奇蹟重生。</p>
+          <div class="footer-tagline">✦ 永不止息 / Healing Never Ends</div>
+        </div>
+        <div>
+          <div class="footer-col-title">網站導覽</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">首頁</a></li>
+            <li><a href="about.html" class="footer-link">中心介紹</a></li>
+            <li><a href="services.html" class="footer-link">服務項目</a></li>
+            <li><a href="children-program.html" class="footer-link">兒童課程</a></li>
+            <li><a href="neurofeedback.html" class="footer-link">神經回饋</a></li>
+            <li><a href="contact.html" class="footer-link">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">服務項目</div>
+          <ul class="footer-links">
+            <li><a href="services.html#eeg" class="footer-link">腦波狀態檢測</a></li>
+            <li><a href="neurofeedback.html" class="footer-link">腦神經回饋訓練</a></li>
+            <li><a href="services.html#frequency" class="footer-link">音差頻胼胝平衡</a></li>
+            <li><a href="services.html#hydrogen" class="footer-link">H2 腦屏障修復矩陣</a></li>
+            <li><a href="services.html#cognitive" class="footer-link">潛意識認知解碼</a></li>
+            <li><a href="services.html#bioscan" class="footer-link">生物掃描檢測</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">聯絡資訊</div>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item"><div class="footer-contact-icon">📍</div><span>請聯絡我們取得地址</span></div>
+            <div class="footer-contact-item"><div class="footer-contact-icon">📞</div><span>請來電預約諮詢</span></div>
+            <div class="footer-contact-item"><div class="footer-contact-icon">🕐</div><span>週一至週六 09:00–18:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 翔禾腦科學與身體機能整合中心。版權所有。</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">隱私政策</a>
+          <a href="#" class="footer-bottom-link">服務條款</a>
+          <a href="contact.html" class="footer-bottom-link">聯絡我們</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="回到頂部">↑</button>
+  <script src="script.js"></script>
+  <script>
+    function toggleFAQ(el) {
+      const item = el.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const agree = document.getElementById('agree').checked;
+
+      if (!name || !phone || !service || !agree) {
+        alert('請填寫必填欄位（姓名、電話、服務項目）並同意隱私政策。');
+        return;
+      }
+
+      const btn = document.getElementById('submitBtn');
+      const text = document.getElementById('submitText');
+      text.textContent = '送出中...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      }, 1200);
+    });
+  </script>
+</body>
+</html>
