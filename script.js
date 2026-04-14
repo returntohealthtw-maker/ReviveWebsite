@@ -1,5 +1,5 @@
 /* ==========================================
-   翔禾腦科學與身體機能整合中心 - 主要 JavaScript
+   納醫芽腦科學與身體機能整合中心 - 主要 JavaScript
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -374,5 +374,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  console.log('翔禾整合中心 | 永不止息 · Healing Never Ends');
+  console.log('納醫芽整合中心 | 永不止息 · Healing Never Ends');
 });
