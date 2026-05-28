@@ -6,7 +6,8 @@
     { "source": "/services", "destination": "/services.html" },
     { "source": "/children-program", "destination": "/children-program.html" },
     { "source": "/neurofeedback", "destination": "/neurofeedback.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/invest", "destination": "/invest.html" }
   ],
   "headers": [
     {

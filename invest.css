@@ -1,0 +1,431 @@
+/* 價值股權體驗頁 */
+.invest-disclaimer {
+  background: linear-gradient(90deg, #5c3d00 0%, #8a5a00 100%);
+  color: #fff8e6;
+  padding: 12px 0;
+  font-size: 0.88rem;
+  text-align: center;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.invest-disclaimer strong {
+  color: #ffe08a;
+}
+
+.invest-dashboard {
+  padding: 48px 0 72px;
+  background: var(--bg-light);
+}
+
+.invest-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.invest-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.invest-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stock-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 20px;
+  margin-bottom: 8px;
+}
+
+.stock-symbol {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  letter-spacing: 0.04em;
+}
+
+.stock-price {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.stock-change {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.stock-change.up {
+  color: #0d7a4a;
+  background: #e8f8ef;
+}
+
+.stock-change.down {
+  color: #b42318;
+  background: #fdecea;
+}
+
+.stock-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.chart-wrap {
+  position: relative;
+  height: 320px;
+}
+
+.chart-range-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.chart-range-btns button {
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text-body);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: var(--transition);
+}
+
+.chart-range-btns button.active,
+.chart-range-btns button:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.valuation-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.val-metric {
+  background: var(--bg-section);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+
+.val-metric-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.val-metric-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.val-slider-group {
+  margin-bottom: 14px;
+}
+
+.val-slider-group label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  color: var(--text-body);
+  margin-bottom: 6px;
+}
+
+.val-slider-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--primary);
+}
+
+.val-methods {
+  margin-top: 16px;
+  border-top: 1px dashed var(--border);
+  padding-top: 16px;
+}
+
+.val-method-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  padding: 6px 0;
+  color: var(--text-body);
+}
+
+.val-method-row span:last-child {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.trade-panel .portfolio-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.portfolio-box {
+  background: var(--bg-section);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.portfolio-box .label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.portfolio-box .value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.trade-form {
+  display: grid;
+  gap: 12px;
+}
+
+.trade-form input,
+.trade-form select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.trade-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn-buy {
+  background: #0d7a4a;
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-buy:hover {
+  background: #0a6240;
+}
+
+.btn-sell {
+  background: #b42318;
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-sell:hover {
+  background: #912018;
+}
+
+.trade-msg {
+  min-height: 1.4em;
+  font-size: 0.86rem;
+  margin-top: 4px;
+}
+
+.trade-msg.ok { color: #0d7a4a; }
+.trade-msg.err { color: #b42318; }
+
+.trade-history {
+  margin-top: 16px;
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 0.82rem;
+}
+
+.trade-history-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-body);
+}
+
+.invest-story {
+  padding: 56px 0;
+}
+
+.invest-story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-lines {
+  padding: 40px 0 0;
+}
+
+.product-lines-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.product-line-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--primary);
+}
+
+.product-line-card.app { border-top-color: var(--accent); }
+.product-line-card.resonance { border-top-color: var(--secondary); }
+.product-line-card.course { border-top-color: var(--primary-light); }
+
+.product-line-card h3 {
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.product-line-card .product-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--bg-section);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.product-line-card p {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.product-line-rev {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.revenue-total-bar {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.revenue-total-bar .total-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.revenue-total-bar .total-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.invest-story-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.invest-story-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.invest-story-card p {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #0d7a4a;
+  font-weight: 600;
+}
+
+.live-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0d7a4a;
+  animation: invest-pulse 1.2s infinite;
+}
+
+@keyframes invest-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+@media (max-width: 992px) {
+  .invest-grid {
+    grid-template-columns: 1fr;
+  }
+  .invest-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-lines-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .valuation-metrics {
+    grid-template-columns: 1fr;
+  }
+  .stock-price {
+    font-size: 2rem;
+  }
+  .invest-story-grid {
+    grid-template-columns: 1fr;
+  }
+}

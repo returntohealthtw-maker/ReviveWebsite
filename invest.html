@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>價值股權體驗 | 納醫芽健康管理顧問股份有限公司</title>
+  <meta name="description" content="以整合醫學、腦科學與健康市場視角，探索納醫芽企業價值與參考股價模型。提供模擬行情與體驗交易，非實際證券買賣。" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="invest.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <div class="invest-disclaimer">
+    <div class="container">
+      <strong>重要聲明：</strong>本頁為「價值敘事＋模擬交易」體驗，<strong>非</strong>台灣證券交易所或櫃買中心之實際上市/上櫃股票買賣。如需真實募資或股權發行，請依法取得主管機關許可並諮詢律師與會計師。
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.7 3 6.1V17h8v-1.9c1.8-1.4 3-3.6 3-6.1 0-4-3-7-7-7z"/>
+              <path d="M9 17v2h6v-2"/><path d="M10 21h4"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">納醫芽腦波分析中心</span>
+            <span class="logo-en">Brain Science & Body Integration</span>
+          </div>
+        </a>
+        <ul class="navbar-nav" id="navMenu">
+          <li><a href="index.html" class="nav-link">首頁</a></li>
+          <li><a href="about.html" class="nav-link">中心介紹</a></li>
+          <li><a href="https://m.ccat.com.tw/4181/ProductList" class="nav-link" target="_blank" rel="noopener noreferrer">療癒商品</a></li>
+          <li><a href="services.html" class="nav-link">服務項目</a></li>
+          <li><a href="children-program.html" class="nav-link">兒童課程</a></li>
+          <li><a href="neurofeedback.html" class="nav-link">神經回饋</a></li>
+          <li><a href="invest.html" class="nav-link active">價值股權</a></li>
+          <li><a href="contact.html" class="nav-link navbar-cta">立即預約</a></li>
+        </ul>
+        <button class="navbar-toggle" id="navToggle" aria-label="開啟選單">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-content">
+        <nav class="breadcrumb">
+          <a href="index.html">首頁</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>價值股權體驗</span>
+        </nav>
+        <h1 class="page-banner-title">納醫芽價值股權<br/>市場敘事與體驗交易</h1>
+        <p class="page-banner-desc">
+          從健康產業 TAM、營收動能、整合醫學護城河到科技溢價，將企業價值轉換為可理解的參考股價；
+          搭配即時模擬行情與體驗買賣，感受品牌成長曲線與市場想像空間。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-lines">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">商業模式</span>
+        <h2 class="section-title">四大變現商品，驅動企業價值</h2>
+        <p class="section-desc" style="max-width:720px;margin:0 auto;text-align:center;color:var(--text-muted);">
+          以下為納醫芽可銷售的核心產品線；估值模型依各產品年化營收加總，並對訂閱型收入給予較高資本市場倍數。
+        </p>
+      </div>
+      <div class="product-lines-grid">
+        <div class="product-line-card">
+          <span class="product-tag">高毛利 · 數據資產</span>
+          <h3>檢測報告</h3>
+          <p>腦波與生理狀態檢測後出具專業報告，作為後續 APP、共振波與整合療程的決策入口，具備高複購與轉介紹潛力。</p>
+          <div class="product-line-rev" id="cardRevReport">年化約 —</div>
+        </div>
+        <div class="product-line-card app">
+          <span class="product-tag">訂閱制 · 規模化</span>
+          <h3>腦波解方 APP 訂閱</h3>
+          <p>依個人腦波數據提供日常訓練、提醒與解方建議，以月訂閱累積穩定現金流，利於估值倍數提升。</p>
+          <div class="product-line-rev" id="cardRevApp">年化約 —</div>
+        </div>
+        <div class="product-line-card resonance">
+          <span class="product-tag">客製化 · 高單價</span>
+          <h3>潛意識神經窗口共振波</h3>
+          <p>針對睡眠障礙、情緒波動、體重管理、莫名怒氣等身心議題，提供個人化共振波方案，切入深層潛意識調節需求。</p>
+          <div class="product-line-rev" id="cardRevResonance">年化約 —</div>
+        </div>
+        <div class="product-line-card course">
+          <span class="product-tag">到店服務 · 非侵入</span>
+          <h3>整合醫學療程</h3>
+          <p>結合神經回饋、腦波訓練與多元非侵入性療法，形成標準化療程套餐，支撐診所營運與會員制收入。</p>
+          <div class="product-line-rev" id="cardRevCourse">年化約 —</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="invest-dashboard">
+    <div class="container">
+      <div class="invest-grid">
+        <div class="invest-card">
+          <div class="invest-card-title">
+            <span><span class="live-badge">模擬行情</span> NAYH · 納醫芽參考股</span>
+            <div class="chart-range-btns">
+              <button type="button" data-range="30">30日</button>
+              <button type="button" data-range="90" class="active">90日</button>
+              <button type="button" data-range="180">180日</button>
+            </div>
+          </div>
+          <div class="stock-ticker">
+            <span class="stock-symbol">NAYH</span>
+            <span class="stock-price" id="stockPrice">—</span>
+            <span class="stock-change up" id="stockChange">—</span>
+          </div>
+          <div class="stock-meta">
+            <span>公允參考價：<strong id="metaFair">—</strong></span>
+            <span>參考市值：<strong id="metaMarketCap">—</strong></span>
+            <span>企業價值 EV：<strong id="metaEV">—</strong></span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="priceChart" aria-label="股價走勢圖"></canvas>
+          </div>
+        </div>
+
+        <div class="invest-card trade-panel">
+          <div class="invest-card-title">體驗交易帳戶</div>
+          <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:14px;">
+            初始虛擬資金 NT$ 1,000,000，僅供操作體驗，不涉及真實金流。
+          </p>
+          <div class="portfolio-summary">
+            <div class="portfolio-box"><div class="label">可用現金</div><div class="value" id="portCash">—</div></div>
+            <div class="portfolio-box"><div class="label">持有股數</div><div class="value" id="portShares">—</div></div>
+            <div class="portfolio-box"><div class="label">持股市值</div><div class="value" id="portEquity">—</div></div>
+            <div class="portfolio-box"><div class="label">總資產</div><div class="value" id="portTotal">—</div></div>
+          </div>
+          <div class="trade-form">
+            <label>
+              交易股數
+              <input type="number" id="tradeQty" min="1" step="1" value="100" />
+            </label>
+            <div class="trade-actions">
+              <button type="button" class="btn-buy" id="btnBuy">買進</button>
+              <button type="button" class="btn-sell" id="btnSell">賣出</button>
+            </div>
+            <button type="button" class="btn btn-secondary" id="btnReset" style="width:100%;">重置體驗帳戶</button>
+            <div class="trade-msg" id="tradeMsg"></div>
+          </div>
+          <div class="trade-history" id="tradeHistory"></div>
+        </div>
+      </div>
+
+      <div class="invest-grid" style="margin-top:24px;">
+        <div class="invest-card">
+          <div class="invest-card-title">商品驅動估值模型（可調參）</div>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">
+            調整四大商品預估銷量，系統自動加總年化營收並重算股價。訂閱與共振波收入占比越高，估值倍數加成越大。
+          </p>
+          <div class="revenue-total-bar">
+            <span class="total-label">四大商品年化營收合計</span>
+            <span class="total-value" id="annualRevenueTotal">—</span>
+          </div>
+          <div class="valuation-metrics">
+            <div class="val-metric"><div class="val-metric-label">每股公允參考價</div><div class="val-metric-value" id="metricFair">—</div></div>
+            <div class="val-metric"><div class="val-metric-label">相對公允價空間</div><div class="val-metric-value" id="metricUpside">—</div></div>
+            <div class="val-metric"><div class="val-metric-label">企業價值 EV</div><div class="val-metric-value" id="metricEV">—</div></div>
+            <div class="val-metric"><div class="val-metric-label">參考市值</div><div class="val-metric-value" id="metricCap">—</div></div>
+          </div>
+
+          <div class="val-slider-group">
+            <label><span>檢測報告銷量</span><span id="reportMonthlyVal">—</span></label>
+            <input type="range" id="reportMonthly" min="10" max="400" step="5" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>APP 訂閱人數</span><span id="appSubsVal">—</span></label>
+            <input type="range" id="appSubs" min="50" max="5000" step="50" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>共振波方案銷量</span><span id="resonanceMonthlyVal">—</span></label>
+            <input type="range" id="resonanceMonthly" min="5" max="200" step="5" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>整合療程場次</span><span id="courseMonthlyVal">—</span></label>
+            <input type="range" id="courseMonthly" min="20" max="500" step="10" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>營收成長率</span><span id="revenueGrowthVal">—</span></label>
+            <input type="range" id="revenueGrowth" min="5" max="80" step="1" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>EBITDA 利潤率</span><span id="ebitdaMarginVal">—</span></label>
+            <input type="range" id="ebitdaMargin" min="10" max="45" step="1" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>營收倍數法</span><span id="revenueMultipleVal">—</span></label>
+            <input type="range" id="revenueMultiple" min="3" max="12" step="0.5" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>可觸及市場占有率</span><span id="tamCaptureVal">—</span></label>
+            <input type="range" id="tamCapture" min="0.05" max="2" step="0.05" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>品牌敘事溢價</span><span id="brandPremiumVal">—</span></label>
+            <input type="range" id="brandPremium" min="100" max="150" step="1" />
+          </div>
+          <div class="val-slider-group">
+            <label><span>腦科學科技溢價</span><span id="techPremiumVal">—</span></label>
+            <input type="range" id="techPremium" min="100" max="160" step="1" />
+          </div>
+
+          <div class="val-methods">
+            <div class="val-method-row"><span>① 檢測報告年化營收</span><span id="revReport">—</span></div>
+            <div class="val-method-row"><span>② APP 訂閱年化營收</span><span id="revApp">—</span></div>
+            <div class="val-method-row"><span>③ 共振波年化營收</span><span id="revResonance">—</span></div>
+            <div class="val-method-row"><span>④ 整合療程年化營收</span><span id="revCourse">—</span></div>
+            <div class="val-method-row"><span>營收倍數法估值（含訂閱加成）</span><span id="methodRevenue">—</span></div>
+            <div class="val-method-row"><span>EBITDA 倍數法</span><span id="methodEbitda">—</span></div>
+            <div class="val-method-row"><span>TAM 滲透法</span><span id="methodTam">—</span></div>
+            <div class="val-method-row"><span>簡化 DCF（5 年＋終值）</span><span id="methodDcf">—</span></div>
+          </div>
+          <p style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">
+            參考單價：報告 NT$4,500／APP NT$599·月／共振波 NT$15,800·套／療程 NT$6,800·次（示範用，可依實際定價調整程式參數）。
+          </p>
+        </div>
+
+        <div class="invest-card">
+          <div class="invest-card-title">為什麼市場會看見巨大價值？</div>
+          <ul style="font-size:0.92rem;color:var(--text-body);line-height:1.75;padding-left:18px;">
+            <li><strong>檢測報告：</strong>低邊際成本、高轉換率，是整條商業鏈的數據入口。</li>
+            <li><strong>APP 訂閱：</strong>可跨地域擴張，形成健康科技公司的 recurring revenue 敘事。</li>
+            <li><strong>共振波客製：</strong>高單價、強差異化，對應睡眠、情緒、體重等剛性痛點市場。</li>
+            <li><strong>整合療程：</strong>非侵入性方案易於標準化複製，適合加盟與多據點擴張。</li>
+            <li><strong>四輪驅動：</strong>報告引流 → 訂閱留存 → 共振波加深 → 療程變現，LTV 可持續放大。</li>
+          </ul>
+          <p style="margin-top:16px;font-size:0.86rem;color:var(--text-muted);">
+            發行股本假設：1,000 萬股（示範用）。實際募資結構請以公司正式財報與法律文件為準。
+          </p>
+          <a href="contact.html" class="btn btn-gold" style="margin-top:20px;display:inline-block;">洽詢合作與投資意向</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="invest-story section" style="background:var(--bg-section);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">投資敘事</span>
+        <h2 class="section-title">四條產品線，對應四種成長引擎</h2>
+      </div>
+      <div class="invest-story-grid">
+        <div class="invest-story-card">
+          <h3>檢測報告</h3>
+          <p>以專業報告建立信任與轉化漏斗，讓客戶快速理解自身腦波與身心狀態，並導向後續方案。</p>
+        </div>
+        <div class="invest-story-card">
+          <h3>APP 訂閱</h3>
+          <p>把腦波解方日常化，提高使用頻率與續訂率，是打造「科技平台」估值敘事的核心。</p>
+        </div>
+        <div class="invest-story-card">
+          <h3>共振波方案</h3>
+          <p>針對潛意識層面的睡眠、情緒、壓力與行為模式，提供高價值客製化服務，提升客單與口碑。</p>
+        </div>
+        <div class="invest-story-card">
+          <h3>整合醫學療程</h3>
+          <p>以非侵入性療程落地執行，形成可複製 SOP，支撐實體據點擴張與穩定現金流。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2 class="cta-title">想進一步了解真實股權合作？</h2>
+        <p class="cta-subtitle">歡迎與我們聯繫，討論策略合作、加盟拓展或依法進行的投資方案（非本頁模擬交易）。</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold">聯絡投資洽詢</a>
+          <a href="about.html" class="btn btn-secondary">認識納醫芽</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.7 3 6.1V17h8v-1.9c1.8-1.4 3-3.6 3-6.1 0-4-3-7-7-7z"/>
+                <path d="M9 17v2h6v-2"/><path d="M10 21h4"/>
+              </svg>
+            </div>
+            <span class="footer-logo-text">納醫芽腦科學與身體機能整合中心</span>
+          </div>
+          <p class="footer-desc">以整合醫學視角，結合神經回饋科技與多元療法，幫助每一位前來的客戶體驗生命的奇蹟重生。</p>
+          <div class="footer-tagline">✦ 永不止息 / Healing Never Ends</div>
+        </div>
+        <div>
+          <div class="footer-col-title">網站導覽</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">首頁</a></li>
+            <li><a href="about.html" class="footer-link">中心介紹</a></li>
+            <li><a href="https://m.ccat.com.tw/4181/ProductList" class="footer-link" target="_blank" rel="noopener noreferrer">療癒商品</a></li>
+            <li><a href="services.html" class="footer-link">服務項目</a></li>
+            <li><a href="children-program.html" class="footer-link">兒童課程</a></li>
+            <li><a href="neurofeedback.html" class="footer-link">神經回饋</a></li>
+            <li><a href="invest.html" class="footer-link">價值股權</a></li>
+            <li><a href="contact.html" class="footer-link">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">服務項目</div>
+          <ul class="footer-links">
+            <li><a href="services.html#eeg" class="footer-link">腦波狀態檢測</a></li>
+            <li><a href="neurofeedback.html" class="footer-link">腦神經回饋訓練</a></li>
+            <li><a href="services.html#frequency" class="footer-link">音差頻胼胝平衡</a></li>
+            <li><a href="services.html#hydrogen" class="footer-link">H2 腦屏障修復矩陣</a></li>
+            <li><a href="services.html#cognitive" class="footer-link">潛意識認知解碼</a></li>
+            <li><a href="services.html#bioscan" class="footer-link">生物掃描檢測</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">聯絡資訊</div>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item"><div class="footer-contact-icon">📞</div><span>客服電話：07-9750288</span></div>
+            <div class="footer-contact-item"><div class="footer-contact-icon">✉️</div><span>客服信箱：returntohealth.tw@gmail.com</span></div>
+            <div class="footer-contact-item"><div class="footer-contact-icon">🧾</div><span>統一編號：83654764</span></div>
+            <div class="footer-contact-item"><div class="footer-contact-icon">🏢</div><span>納醫芽健康管理顧問股份有限公司</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 納醫芽腦科學與身體機能整合中心。版權所有。</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">隱私政策</a>
+          <a href="#" class="footer-bottom-link">服務條款</a>
+          <a href="contact.html" class="footer-bottom-link">聯絡我們</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="回到頂部">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+  <script src="invest.js"></script>
+</body>
+</html>
