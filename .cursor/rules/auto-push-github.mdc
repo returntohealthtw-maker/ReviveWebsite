@@ -1,0 +1,16 @@
+---
+description: After website changes, automatically commit and push to GitHub
+alwaysApply: true
+---
+
+# Auto push to GitHub (翔禾網站 / ReviveWebsite)
+
+When you finish making code or content changes in this repository:
+
+1. Run `git status` to confirm there are changes worth committing.
+2. If there are changes, stage relevant files, commit with a clear English message describing the why, and `git push` to `origin` on the current branch (usually `main`).
+3. Use PowerShell-safe commands (`;` to chain), e.g. `git add -A; git commit -m "..."; git push`.
+4. Briefly tell the user the commit hash and that push succeeded.
+5. Do not commit secrets (`.env`, credentials). Do not force-push unless the user explicitly asks.
+
+The user has asked for automatic push after changes; you do not need to ask permission each time for this repo.
