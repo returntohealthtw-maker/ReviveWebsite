@@ -6,14 +6,14 @@
   'use strict';
 
   const STOCK = {
-    symbol: 'NAYH',
+    symbol: 'Nayah',
     name: '納醫芽',
     company: '納醫芽健康管理顧問股份有限公司',
     sharesOutstanding: 10000000,
     currency: 'TWD',
   };
 
-  const STORAGE_KEY = 'nayh_invest_portfolio_v1';
+  const STORAGE_KEY = 'nayah_invest_portfolio_v1';
   const STARTING_CASH = 1000000;
 
   /** 四大變現商品：單價為預設參考，可透過滑桿調整銷量 */
@@ -230,7 +230,7 @@
           labels,
           datasets: [
             {
-              label: 'NAYH 參考價',
+              label: 'Nayah 參考價',
               data,
               borderColor: '#0D5C73',
               backgroundColor: 'rgba(13, 92, 115, 0.12)',
