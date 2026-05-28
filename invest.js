@@ -265,7 +265,7 @@
             x: { grid: { display: false } },
             y: {
               ticks: {
-                callback: (v) => 'NT$' + v,
+                callback: (v) => 'NT$' + Number(v).toFixed(2),
               },
             },
           },
