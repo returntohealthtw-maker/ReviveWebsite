@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .sleep-media-block svg,
+    .sleep-media-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .sleep-hero-grid,
+      .sleep-two-col,
+      .sleep-video-grid,
+      .sleep-four-grid,
+      .sleep-three-grid,
+      .sleep-solution-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -57,7 +76,7 @@
           <span>睡眠障礙修復專題</span>
         </nav>
         <span class="section-tag" style="margin-bottom: 14px;">Sleep Recovery Program</span>
-        <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; margin-top: 18px;">
+        <div class="sleep-hero-grid" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; margin-top: 18px;">
           <div>
             <h1 class="page-banner-title" style="color: var(--primary-dark);">你以為只是失眠，<br/>其實可能是大腦在求救</h1>
             <p class="page-banner-desc" style="max-width: 760px;">
@@ -75,8 +94,45 @@
               <span style="padding:8px 14px; border-radius:999px; background:rgba(184,134,11,0.12); color:#8a5a00; font-size:0.82rem; font-weight:600;">客製化睡眠支持規劃</span>
             </div>
           </div>
-          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid rgba(168,120,210,0.18); background: white;">
-            <img src="assets/sleep-hero-visual.svg" alt="睡眠障礙修復主視覺" />
+          <div class="sleep-media-block" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid rgba(168,120,210,0.18); background: white;">
+            <svg viewBox="0 0 900 720" aria-label="睡眠障礙修復主視覺" role="img" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sleepHeroBg" x1="60" y1="50" x2="820" y2="650" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFE8F6"/>
+                  <stop offset="0.45" stop-color="#E7F7FF"/>
+                  <stop offset="1" stop-color="#F6F1FF"/>
+                </linearGradient>
+                <linearGradient id="sleepHeroAccent" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#8B3FD0"/>
+                  <stop offset="1" stop-color="#BA66FF"/>
+                </linearGradient>
+              </defs>
+              <rect width="900" height="720" rx="28" fill="url(#sleepHeroBg)"/>
+              <circle cx="132" cy="112" r="78" fill="#FFC8E3" fill-opacity="0.65"/>
+              <circle cx="754" cy="88" r="92" fill="#C8EFFF" fill-opacity="0.72"/>
+              <circle cx="770" cy="620" r="110" fill="#E4D7FF" fill-opacity="0.85"/>
+              <path d="M0 592C112 560 197 642 314 634C430 626 524 550 626 560C740 572 820 642 900 624V720H0V592Z" fill="white" fill-opacity="0.58"/>
+              <path d="M34 98C112 48 178 32 280 36C360 39 430 63 505 100" stroke="#C866C4" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="104" cy="92" r="8" fill="#FF90CE"/>
+              <circle cx="176" cy="68" r="9" fill="#FFB5DB"/>
+              <circle cx="266" cy="60" r="10" fill="#FFA7D4"/>
+              <circle cx="344" cy="76" r="8" fill="#FFB2DB"/>
+              <rect x="420" y="118" width="380" height="354" rx="28" fill="white" fill-opacity="0.68"/>
+              <text x="460" y="205" fill="#8B3FD0" font-size="72" font-weight="800" font-family="'Noto Serif TC', serif">無藥舒眠</text>
+              <text x="460" y="264" fill="#24384A" font-size="22" font-weight="700" font-family="'Noto Sans TC', sans-serif">讓深度睡眠重新啟動你的夜間修復能力</text>
+              <rect x="458" y="300" width="276" height="46" rx="23" fill="#7A34B6" fill-opacity="0.12"/>
+              <text x="486" y="329" fill="#7A34B6" font-size="19" font-weight="700" font-family="'Noto Sans TC', sans-serif">淺眠 / 夜醒 / 腦霧 / 越睡越累</text>
+              <circle cx="476" cy="390" r="9" fill="url(#sleepHeroAccent)"/>
+              <text x="496" y="398" fill="#24384A" font-size="20" font-family="'Noto Sans TC', sans-serif">AI 智能掃描與腦波檢測</text>
+              <circle cx="476" cy="432" r="9" fill="url(#sleepHeroAccent)"/>
+              <text x="496" y="440" fill="#24384A" font-size="20" font-family="'Noto Sans TC', sans-serif">神經調節與舒眠支持</text>
+              <circle cx="476" cy="474" r="9" fill="url(#sleepHeroAccent)"/>
+              <text x="496" y="482" fill="#24384A" font-size="20" font-family="'Noto Sans TC', sans-serif">非侵入性整合醫學規劃</text>
+              <rect x="68" y="470" width="270" height="134" rx="24" fill="#11263B" fill-opacity="0.96"/>
+              <text x="94" y="515" fill="#9CCBFF" font-size="18" font-family="'Noto Sans TC', sans-serif">Deep Sleep Signal</text>
+              <path d="M92 570C114 570 120 522 154 522C184 522 184 590 220 590C258 590 256 494 300 494" stroke="#8DE0FF" stroke-width="8" stroke-linecap="round"/>
+              <text x="92" y="606" fill="white" font-size="16" font-family="'Noto Sans TC', sans-serif">真正要修復的，是深度睡眠能力</text>
+            </svg>
           </div>
         </div>
       </div>
@@ -85,7 +141,7 @@
 
   <section class="content-section" style="padding-top: 36px; padding-bottom: 36px; background: linear-gradient(90deg, #1f2c3a, #29384a);">
     <div class="container">
-      <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px;" class="fade-in">
+      <div class="sleep-four-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px;" class="fade-in">
         <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 18px;">
           <div style="font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-bottom: 6px;">如果你常常</div>
           <div style="font-size: 1rem; color: white; font-weight: 700; line-height: 1.5;">躺很久還睡不著</div>
@@ -108,14 +164,14 @@
 
   <section class="content-section">
     <div class="container">
-      <div style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:32px; align-items:stretch;" class="fade-in">
+      <div class="sleep-two-col" style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:32px; align-items:stretch;" class="fade-in">
         <div style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); padding:36px;">
           <span class="section-tag">為什麼要重視</span>
           <h2 style="font-family:'Noto Serif TC', serif; font-size:1.9rem; color:var(--text-dark); margin:12px 0 18px; line-height:1.35;">
             睡眠障礙，往往是更深層失衡的開始
           </h2>
           <p style="font-size:0.98rem; color:var(--text-body); line-height:1.95; margin-bottom:18px;">
-            依據你提供的睡眠專題講座內容，長期睡眠障礙與腦部功能失衡、情緒低落、
+            長期睡眠障礙與腦部功能失衡、情緒低落、
             反應遲緩、腦霧感與白天疲憊等狀況，往往會彼此交互影響。
             若深度睡眠不足，身體與大腦的夜間修復效率也可能跟著下降。
           </p>
@@ -142,7 +198,7 @@
           <div style="font-size:0.82rem; letter-spacing:0.14em; text-transform:uppercase; color:#8b5fbf; font-weight:700; margin-bottom:10px;">Deep Sleep</div>
           <h2 style="font-family:'Noto Serif TC', serif; font-size:2.3rem; line-height:1.2; color:#7a34b6; margin-bottom:16px;">無藥舒眠<br/>健康之道</h2>
           <p style="font-size:0.95rem; color:var(--text-body); line-height:1.9; margin-bottom:22px;">
-            參考附檔 DM 與睡眠講座重點，我們將睡眠支持聚焦在
+            睡眠支持聚焦在
             「評估原因、重建深度睡眠、穩定神經節律、提升白天恢復感」。
           </p>
           <div style="display:flex; flex-direction:column; gap:10px;">
@@ -156,34 +212,125 @@
     </div>
   </section>
 
-  <section class="content-section" style="background: var(--bg-section);">
+  <section class="content-section" style="background: linear-gradient(180deg, #eef4f7 0%, #f7fbfd 100%);">
     <div class="container">
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;" class="fade-in">
-        <div style="background:white; border:1px solid var(--border); border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow-sm);">
-          <img src="assets/sleep-problem-map.svg" alt="睡眠問題與白天功能連動圖" />
+      <div class="sleep-two-col" style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;" class="fade-in">
+        <div class="sleep-media-block" style="background:white; border:1px solid var(--border); border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow-sm);">
+          <svg viewBox="0 0 980 640" aria-label="睡眠問題與白天功能連動圖" role="img" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="problemBg" x1="60" y1="40" x2="900" y2="590" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#12273A"/>
+                <stop offset="1" stop-color="#244057"/>
+              </linearGradient>
+              <linearGradient id="problemLine" x1="0" y1="0" x2="1" y2="0">
+                <stop stop-color="#A65BFF"/>
+                <stop offset="1" stop-color="#FF8EC3"/>
+              </linearGradient>
+            </defs>
+            <rect width="980" height="640" rx="24" fill="url(#problemBg)"/>
+            <text x="54" y="92" fill="white" font-size="44" font-weight="800" font-family="'Noto Serif TC', serif">睡不好的後果，不只發生在夜晚</text>
+            <text x="54" y="134" fill="#C8DFF0" font-size="20" font-family="'Noto Sans TC', sans-serif">夜間修復不足，白天的情緒、專注、記憶與恢復力都會跟著被拖慢。</text>
+            <rect x="54" y="200" width="188" height="138" rx="24" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12"/>
+            <text x="82" y="250" fill="#A8D1FF" font-size="24" font-weight="700" font-family="'Noto Sans TC', sans-serif">難入睡</text>
+            <text x="82" y="290" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">躺很久睡不著</text>
+            <text x="82" y="318" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">腦袋停不下來</text>
+            <rect x="284" y="200" width="188" height="138" rx="24" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12"/>
+            <text x="312" y="250" fill="#A8D1FF" font-size="24" font-weight="700" font-family="'Noto Sans TC', sans-serif">淺眠夜醒</text>
+            <text x="312" y="290" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">半夜反覆醒來</text>
+            <text x="312" y="318" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">醒後難再入睡</text>
+            <rect x="514" y="200" width="188" height="138" rx="24" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12"/>
+            <text x="542" y="250" fill="#A8D1FF" font-size="24" font-weight="700" font-family="'Noto Sans TC', sans-serif">深睡不足</text>
+            <text x="542" y="290" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">越睡越累</text>
+            <text x="542" y="318" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">修復感不夠</text>
+            <rect x="744" y="200" width="188" height="138" rx="24" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12"/>
+            <text x="772" y="250" fill="#A8D1FF" font-size="24" font-weight="700" font-family="'Noto Sans TC', sans-serif">白天崩掉</text>
+            <text x="772" y="290" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">腦霧、煩躁</text>
+            <text x="772" y="318" fill="white" font-size="18" font-family="'Noto Sans TC', sans-serif">記憶與專注下滑</text>
+            <path d="M242 268H284" stroke="url(#problemLine)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M472 268H514" stroke="url(#problemLine)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M702 268H744" stroke="url(#problemLine)" stroke-width="8" stroke-linecap="round"/>
+            <rect x="160" y="420" width="660" height="118" rx="26" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12"/>
+            <text x="194" y="472" fill="#FFC2E5" font-size="28" font-weight="800" font-family="'Noto Serif TC', serif">真正要處理的，不只是「失眠」本身</text>
+            <text x="194" y="512" fill="white" font-size="20" font-family="'Noto Sans TC', sans-serif">而是大腦有沒有進入深度修復，自律神經是否長期卡在高警覺狀態。</text>
+          </svg>
         </div>
-        <div style="background:white; border:1px solid var(--border); border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow-sm);">
-          <img src="assets/sleep-solution-flow.svg" alt="睡眠修復整合支持流程圖" />
+        <div class="sleep-media-block" style="background:white; border:1px solid var(--border); border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow-sm);">
+          <svg viewBox="0 0 980 640" aria-label="睡眠修復整合支持流程圖" role="img" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="solutionBg" x1="52" y1="44" x2="920" y2="580" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F8F2FF"/>
+                <stop offset="1" stop-color="#ECF7FB"/>
+              </linearGradient>
+            </defs>
+            <rect width="980" height="640" rx="24" fill="url(#solutionBg)"/>
+            <text x="52" y="86" fill="#1A2B35" font-size="42" font-weight="800" font-family="'Noto Serif TC', serif">睡眠修復，是一套整合流程，不是單點處理</text>
+            <text x="54" y="126" fill="#607789" font-size="20" font-family="'Noto Sans TC', sans-serif">先評估，再掃描，再調節，再重建，才能真正把睡眠能力拉回來。</text>
+            <rect x="54" y="194" width="190" height="176" rx="24" fill="white" stroke="#D6E6EE" stroke-width="2"/>
+            <text x="82" y="244" fill="#7A34B6" font-size="24" font-weight="800" font-family="'Noto Sans TC', sans-serif">01 評估</text>
+            <text x="82" y="286" fill="#1A2B35" font-size="22" font-weight="700" font-family="'Noto Sans TC', sans-serif">睡眠訪談 + 腦波檢測</text>
+            <text x="82" y="326" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">看清夜醒、淺眠、</text>
+            <text x="82" y="354" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">疲勞與節律失衡</text>
+            <rect x="280" y="194" width="190" height="176" rx="24" fill="white" stroke="#D6E6EE" stroke-width="2"/>
+            <text x="308" y="244" fill="#7A34B6" font-size="24" font-weight="800" font-family="'Noto Sans TC', sans-serif">02 掃描</text>
+            <text x="308" y="286" fill="#1A2B35" font-size="22" font-weight="700" font-family="'Noto Sans TC', sans-serif">盤點失衡因子</text>
+            <text x="308" y="326" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">從神經、內分泌、</text>
+            <text x="308" y="354" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">呼吸與恢復力一起看</text>
+            <rect x="506" y="194" width="190" height="176" rx="24" fill="white" stroke="#D6E6EE" stroke-width="2"/>
+            <text x="534" y="244" fill="#7A34B6" font-size="24" font-weight="800" font-family="'Noto Sans TC', sans-serif">03 調節</text>
+            <text x="534" y="286" fill="#1A2B35" font-size="22" font-weight="700" font-family="'Noto Sans TC', sans-serif">神經節律支持</text>
+            <text x="534" y="326" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">定頻音頻、共振波、</text>
+            <text x="534" y="354" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">回饋與放鬆訓練</text>
+            <rect x="732" y="194" width="190" height="176" rx="24" fill="white" stroke="#D6E6EE" stroke-width="2"/>
+            <text x="760" y="244" fill="#7A34B6" font-size="24" font-weight="800" font-family="'Noto Sans TC', sans-serif">04 重建</text>
+            <text x="760" y="286" fill="#1A2B35" font-size="22" font-weight="700" font-family="'Noto Sans TC', sans-serif">客製化睡眠規劃</text>
+            <text x="760" y="326" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">讓夜間修復與白天</text>
+            <text x="760" y="354" fill="#607789" font-size="18" font-family="'Noto Sans TC', sans-serif">精神慢慢回到正軌</text>
+            <path d="M244 282H280" stroke="#9C5DFF" stroke-width="8" stroke-linecap="round"/>
+            <path d="M470 282H506" stroke="#9C5DFF" stroke-width="8" stroke-linecap="round"/>
+            <path d="M696 282H732" stroke="#9C5DFF" stroke-width="8" stroke-linecap="round"/>
+            <rect x="184" y="452" width="610" height="108" rx="26" fill="#173147"/>
+            <text x="220" y="496" fill="#BCE8FF" font-size="18" font-family="'Noto Sans TC', sans-serif">不是單壓症狀，而是一步一步把真正能睡好的條件拉回來</text>
+            <text x="220" y="536" fill="white" font-size="28" font-weight="800" font-family="'Noto Serif TC', serif">從大腦節律、深度睡眠到白天恢復力，整體一起重建</text>
+          </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="content-section" id="video-zone" style="background: var(--bg-section);">
+  <section class="content-section" id="video-zone" style="background: linear-gradient(135deg, #f3f8fb, #eef2ff);">
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-tag">影音專區</span>
-        <h2 class="section-title">用畫面，讓睡眠問題更有感</h2>
+        <h2 class="section-title">用影音講清楚，為什麼你一直睡不好</h2>
         <p class="section-subtitle" style="max-width:860px; margin:0 auto;">
-          我先幫你把高吸引力的影音區版型做好。等你提供正式影片連結、講座精華或實拍素材後，
-          就能直接替換成可播放版本。
+          以講座型短片與方案介紹片雙軸溝通，先讓訪客被問題打中，再理解睡眠支持方案。
         </p>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div class="sleep-video-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px;">
         <div style="display:grid; gap: 24px;">
           <div style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);">
-            <img src="assets/sleep-video-cover-1.svg" alt="睡眠障礙專題講座影片封面" />
+            <div class="sleep-media-block">
+              <svg viewBox="0 0 1100 620" aria-label="睡眠障礙專題講座影片封面" role="img" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="cover1bg" x1="70" y1="44" x2="1012" y2="564" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B2437"/>
+                    <stop offset="1" stop-color="#4B2268"/>
+                  </linearGradient>
+                </defs>
+                <rect width="1100" height="620" fill="url(#cover1bg)"/>
+                <circle cx="802" cy="318" r="90" fill="white" fill-opacity="0.14"/>
+                <circle cx="802" cy="318" r="70" fill="white" fill-opacity="0.12"/>
+                <circle cx="802" cy="318" r="48" fill="white" fill-opacity="0.95"/>
+                <path d="M786 290L832 318L786 346V290Z" fill="#4B2268"/>
+                <text x="84" y="130" fill="#C6DFFF" font-size="24" font-family="'Noto Sans TC', sans-serif">Sleep Topic Film</text>
+                <text x="82" y="212" fill="white" font-size="58" font-weight="800" font-family="'Noto Serif TC', serif">你以為只是失眠，</text>
+                <text x="82" y="284" fill="white" font-size="58" font-weight="800" font-family="'Noto Serif TC', serif">其實可能是大腦修復出了問題</text>
+                <text x="84" y="362" fill="#FFB8DD" font-size="28" font-family="'Noto Sans TC', sans-serif">適合作為講座精華、廣告開場與短影音封面</text>
+                <rect x="82" y="446" width="424" height="60" rx="30" fill="white" fill-opacity="0.1"/>
+                <text x="118" y="484" fill="white" font-size="24" font-family="'Noto Sans TC', sans-serif">深度睡眠不足 → 白天功能連鎖下滑</text>
+              </svg>
+            </div>
             <div style="padding: 22px 24px;">
               <div style="font-size:1.08rem; font-weight:700; color:var(--text-dark); margin-bottom:8px;">影片一：睡眠障礙專題講座精華</div>
               <div style="font-size:0.92rem; line-height:1.8; color: var(--text-muted);">
@@ -192,7 +339,28 @@
             </div>
           </div>
           <div style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);">
-            <img src="assets/sleep-video-cover-2.svg" alt="睡眠整合方案介紹影片封面" />
+            <div class="sleep-media-block">
+              <svg viewBox="0 0 1100 620" aria-label="睡眠整合方案介紹影片封面" role="img" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="cover2bg" x1="72" y1="40" x2="1016" y2="566" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F4EEFF"/>
+                    <stop offset="1" stop-color="#EAF7FC"/>
+                  </linearGradient>
+                </defs>
+                <rect width="1100" height="620" fill="url(#cover2bg)"/>
+                <rect x="70" y="66" width="960" height="488" rx="30" fill="white" stroke="#D7E6EE" stroke-width="2"/>
+                <circle cx="818" cy="308" r="80" fill="#7A34B6" fill-opacity="0.14"/>
+                <circle cx="818" cy="308" r="58" fill="#7A34B6" fill-opacity="0.2"/>
+                <circle cx="818" cy="308" r="42" fill="#7A34B6"/>
+                <path d="M804 284L844 308L804 332V284Z" fill="white"/>
+                <text x="130" y="160" fill="#7A34B6" font-size="24" font-family="'Noto Sans TC', sans-serif">Sleep Recovery Plan</text>
+                <text x="128" y="236" fill="#1A2B35" font-size="52" font-weight="800" font-family="'Noto Serif TC', serif">睡眠修復不是一招見效</text>
+                <text x="128" y="302" fill="#1A2B35" font-size="52" font-weight="800" font-family="'Noto Serif TC', serif">而是一套整合支持流程</text>
+                <text x="132" y="386" fill="#607789" font-size="25" font-family="'Noto Sans TC', sans-serif">腦波檢測 / 全身掃描 / 神經調節 / 個人化規劃</text>
+                <rect x="128" y="438" width="394" height="56" rx="28" fill="#7A34B6" fill-opacity="0.12"/>
+                <text x="160" y="474" fill="#7A34B6" font-size="24" font-family="'Noto Sans TC', sans-serif">非侵入性睡眠支持方案</text>
+              </svg>
+            </div>
             <div style="padding: 22px 24px;">
               <div style="font-size:1.08rem; font-weight:700; color:var(--text-dark); margin-bottom:8px;">影片二：睡眠修復方案介紹</div>
               <div style="font-size:0.92rem; line-height:1.8; color: var(--text-muted);">
@@ -203,18 +371,18 @@
         </div>
         <div style="display:grid; gap: 24px;">
           <div style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); padding:26px;">
-            <div style="font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:#8b5fbf; font-weight:700; margin-bottom:8px;">Media Pack</div>
-            <div style="font-family:'Noto Serif TC', serif; font-size:1.45rem; color:var(--text-dark); margin-bottom:12px;">這一頁現在已經有自己的圖像素材</div>
+            <div style="font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:#8b5fbf; font-weight:700; margin-bottom:8px;">Video Strategy</div>
+            <div style="font-family:'Noto Serif TC', serif; font-size:1.45rem; color:var(--text-dark); margin-bottom:12px;">兩支影片，分別負責「打痛點」與「講方案」</div>
             <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9rem; color:var(--text-body); line-height:1.75;">
-              <div>• 1 張主視覺圖：適合頁首與廣告縮圖</div>
-              <div>• 2 張資訊圖：加強理解與說服力</div>
-              <div>• 2 張影片封面：可直接用於短影音或講座影片</div>
+              <div>• 第一支影片先抓住失眠、夜醒、腦霧與白天疲累的痛點</div>
+              <div>• 第二支影片再說明為什麼需要腦波、掃描與整合支持</div>
+              <div>• 這樣的觀看路徑更容易把陌生訪客帶進預約與諮詢</div>
             </div>
           </div>
           <div style="background:linear-gradient(135deg, #7a34b6, #9347d2); color:white; border-radius:var(--radius-lg); box-shadow:var(--shadow-md); padding:26px;">
-            <div style="font-size:1.3rem; font-weight:700; margin-bottom:10px;">影片目前是封面版，不是真正影片檔</div>
+            <div style="font-size:1.3rem; font-weight:700; margin-bottom:10px;">先把痛點打中，再把方案講清楚</div>
             <div style="font-size:0.9rem; line-height:1.8; opacity:0.92; margin-bottom:16px;">
-              我已先幫你把「影片感」做出來。若你之後要真實可播放影片，我可以再幫你寫 30 秒、60 秒、90 秒版本腳本與字幕分鏡。
+              當訪客被「越睡越累、白天崩掉」的問題打中後，再引導他看到整合評估與睡眠支持流程，頁面的說服力會明顯提高。
             </div>
             <a href="contact.html" class="btn btn-secondary" style="background:white; color:#7a34b6; border:none;">先預約，再索取睡眠方案</a>
           </div>
@@ -223,18 +391,18 @@
     </div>
   </section>
 
-  <section class="content-section" style="background: var(--bg-section);">
+  <section class="content-section" style="background: linear-gradient(180deg, #f4f8fb 0%, #edf4f8 100%);">
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-tag">睡眠機制</span>
         <h2 class="section-title">為什麼深度睡眠這麼重要？</h2>
         <p class="section-subtitle" style="max-width:860px; margin:0 auto;">
-          你提供的講座資料提到：當深度睡眠不足時，大腦夜間修復效率可能下降，
+          當深度睡眠不足時，大腦夜間修復效率可能下降，
           進而讓白天的精神、記憶與情緒調節更辛苦。
         </p>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
+      <div class="sleep-three-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
         <div style="background:white; border-radius:var(--radius-md); border:1px solid var(--border); padding:28px; box-shadow:var(--shadow-sm);">
           <div style="font-size:2rem; margin-bottom:12px;">🌙</div>
           <div style="font-weight:700; color:var(--text-dark); margin-bottom:8px;">不是只看睡多久</div>
@@ -268,7 +436,7 @@
         <p class="section-subtitle">從身體系統到腦波節律，先找到可能原因，再安排支持方向</p>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;" class="fade-in">
+      <div class="sleep-four-grid" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;" class="fade-in">
         <div style="background:var(--bg-section); border-radius:var(--radius-md); padding:24px; border:1px solid var(--border);">
           <div style="font-size:2rem; margin-bottom:12px;">1</div>
           <div style="font-weight:700; color:var(--text-dark); margin-bottom:8px;">睡眠狀態訪談</div>
@@ -293,19 +461,19 @@
     </div>
   </section>
 
-  <section class="content-section" id="solutions" style="background: var(--bg-section);">
+  <section class="content-section" id="solutions" style="background: linear-gradient(135deg, #1a3042 0%, #25465d 100%);">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-tag">整合方案</span>
-        <h2 class="section-title">睡眠障礙修復的整合支持方向</h2>
-        <p class="section-subtitle" style="max-width:860px; margin:0 auto;">
-          依照附檔與講座資料脈絡，我們整理出睡眠支持常用的幾個方向；
+        <span class="section-tag" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.18); color: white;">整合方案</span>
+        <h2 class="section-title" style="color: white;">睡眠障礙修復的整合支持方向</h2>
+        <p class="section-subtitle" style="max-width:860px; margin:0 auto; color: rgba(255,255,255,0.78);">
+          睡眠支持常用的幾個方向如下；
           實際搭配仍需依個人評估結果調整。
         </p>
-        <div class="section-divider"></div>
+        <div class="section-divider" style="background: rgba(255,255,255,0.18);"></div>
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px;">
+      <div class="sleep-solution-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:22px;">
         <div style="background:white; border-radius:var(--radius-md); padding:28px; border:1px solid var(--border); box-shadow:var(--shadow-sm);">
           <div style="display:flex; gap:16px; align-items:flex-start;">
             <div style="font-size:2rem;">🧠</div>
