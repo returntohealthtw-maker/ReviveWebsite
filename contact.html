@@ -495,9 +495,14 @@
       if (!isOpen) item.classList.add('open');
     }
 
+    // 表單資料會送到 Google 試算表（透過 Google Apps Script Web App）。
+    // 設定方式請見 google-apps-script/README.md，部署後把網址貼在下面這行取代預設值。
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec';
+
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
+      const form = document.getElementById('contactForm');
       const name = document.getElementById('name').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const service = document.getElementById('service').value;
@@ -513,10 +518,32 @@
       text.textContent = '送出中...';
       btn.disabled = true;
 
-      setTimeout(() => {
+      const showSuccess = () => {
         document.getElementById('contactForm').style.display = 'none';
         document.getElementById('formSuccess').classList.add('show');
-      }, 1200);
+      };
+
+      if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.indexOf('YOUR_DEPLOYMENT_ID') !== -1) {
+        // 尚未設定 Google 試算表連結，先以本機模擬方式呈現送出成功畫面。
+        console.warn('尚未設定 GOOGLE_SCRIPT_URL，表單資料目前不會被儲存，請參考 google-apps-script/README.md 完成設定。');
+        setTimeout(showSuccess, 1000);
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      })
+        .then(showSuccess)
+        .catch((err) => {
+          console.error('表單送出失敗：', err);
+          btn.disabled = false;
+          text.textContent = '送出預約申請';
+          alert('很抱歉，送出時發生問題，請稍後再試，或直接來電：07-9750288');
+        });
     });
   </script>
 </body>
