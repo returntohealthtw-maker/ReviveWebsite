@@ -70,9 +70,6 @@
     .sleep-hero-banner {
       background: #0a0a1a !important;
       padding: 150px 0 70px !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       min-height: 620px;
       overflow: hidden;
     }
@@ -103,11 +100,13 @@
         linear-gradient(0deg, rgba(6,6,20,0.55) 0%, rgba(6,6,20,0) 30%);
     }
     .sleep-hero-badge-row {
-      position: relative;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 32px;
       z-index: 2;
       display: flex;
       justify-content: flex-end;
-      margin-top: 24px;
     }
     .sleep-hero-badge {
       display: flex;
@@ -246,10 +245,11 @@
       }
       .sleep-hero-banner {
         min-height: 0;
-        padding: 130px 0 40px !important;
+        padding: 130px 0 210px !important;
       }
       .sleep-hero-badge-row {
         justify-content: center;
+        bottom: 24px;
       }
     }
   </style>
