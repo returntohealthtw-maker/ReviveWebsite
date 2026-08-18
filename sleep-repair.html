@@ -67,61 +67,57 @@
       font-weight: 600;
     }
 
-    .sleep-hero-visual {
-      position: relative;
-      border-radius: var(--radius-lg);
+    .sleep-hero-banner {
+      background: #0a0a1a !important;
+      padding: 150px 0 70px !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 620px;
       overflow: hidden;
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(168,120,210,0.18);
-      background: #0f1b2b;
-      height: 100%;
-      min-height: 460px;
     }
-    .sleep-hero-visual img {
+    .sleep-hero-banner::before {
+      display: none;
+    }
+    .sleep-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .sleep-hero-bg img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      animation: sleepHeroBreathe 12s ease-in-out infinite;
+      animation: sleepHeroBreathe 16s ease-in-out infinite;
     }
     @keyframes sleepHeroBreathe {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.06); }
+      50% { transform: scale(1.07); }
     }
-    .sleep-hero-visual::after {
-      content: "";
+    .sleep-hero-bg-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(0deg, rgba(10,8,28,0.55) 0%, rgba(10,8,28,0) 35%);
-      pointer-events: none;
+      background:
+        linear-gradient(100deg, rgba(6,6,20,0.94) 0%, rgba(6,6,20,0.8) 32%, rgba(6,6,20,0.42) 58%, rgba(6,6,20,0.12) 80%),
+        linear-gradient(0deg, rgba(6,6,20,0.55) 0%, rgba(6,6,20,0) 30%);
     }
-    .sleep-hero-tagline {
-      position: absolute;
-      top: 20px;
-      left: 20px;
+    .sleep-hero-badge-row {
+      position: relative;
       z-index: 2;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(15, 27, 43, 0.55);
-      backdrop-filter: blur(6px);
-      color: #fff;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 24px;
     }
     .sleep-hero-badge {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      z-index: 2;
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 10px 16px 10px 10px;
+      padding: 10px 18px 10px 10px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(30,10,60,0.28);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
     .sleep-hero-badge-ring {
       --pct: 72;
@@ -239,7 +235,6 @@
     }
 
     @media (max-width: 900px) {
-      .sleep-hero-grid,
       .sleep-two-col,
       .sleep-video-grid,
       .sleep-four-grid,
@@ -249,10 +244,12 @@
       .sleep-problem-grid {
         grid-template-columns: 1fr !important;
       }
-      .sleep-hero-visual {
-        height: auto;
+      .sleep-hero-banner {
         min-height: 0;
-        aspect-ratio: 3 / 4;
+        padding: 130px 0 40px !important;
+      }
+      .sleep-hero-badge-row {
+        justify-content: center;
       }
     }
   </style>
@@ -291,11 +288,12 @@
     </div>
   </nav>
 
-  <section class="page-banner" style="background:
-    linear-gradient(135deg, rgba(255,245,252,0.95), rgba(235,247,255,0.95)),
-    radial-gradient(circle at top left, rgba(212,160,255,0.18), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(13,92,115,0.12), transparent 35%);">
-    <div class="container">
+  <section class="page-banner sleep-hero-banner">
+    <div class="sleep-hero-bg">
+      <img src="assets/sleep-hero-photo.png" alt="深度睡眠與腦波修復示意圖" loading="eager" />
+      <div class="sleep-hero-bg-overlay"></div>
+    </div>
+    <div class="container" style="position:relative; z-index:2;">
       <div class="page-banner-content">
         <nav class="breadcrumb">
           <a href="index.html">首頁</a>
@@ -305,37 +303,31 @@
           <span>睡眠障礙修復專題</span>
         </nav>
         <span class="section-tag" style="margin-bottom: 14px;">Sleep Recovery Program</span>
-        <div class="sleep-hero-grid" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: stretch; margin-top: 18px;">
-          <div>
-            <h1 class="page-banner-title" style="color: var(--primary-dark);">你以為只是失眠，<br/>其實可能是大腦在求救</h1>
-            <p class="page-banner-desc" style="max-width: 760px;">
-              睡不著、淺眠、半夜醒來、越睡越累，常常不只是「生活太忙」。
-              當深度睡眠長期不足，白天的情緒、記憶、專注與恢復力都可能被一起拖垮。
-              納醫芽從腦波、神經節律與整合醫學角度出發，協助你重新找回真正能修復身體的睡眠。
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;">
-              <a href="contact.html" class="btn btn-gold">立即預約睡眠評估</a>
-              <a href="#video-zone" class="btn btn-secondary">先看專題內容</a>
-            </div>
-            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;">
-              <span style="padding:8px 14px; border-radius:999px; background:rgba(122,52,182,0.1); color:#7a34b6; font-size:0.82rem; font-weight:600;">非侵入性整合支持</span>
-              <span style="padding:8px 14px; border-radius:999px; background:rgba(13,92,115,0.08); color:var(--primary-dark); font-size:0.82rem; font-weight:600;">腦波與深度睡眠評估</span>
-              <span style="padding:8px 14px; border-radius:999px; background:rgba(184,134,11,0.12); color:#8a5a00; font-size:0.82rem; font-weight:600;">客製化睡眠支持規劃</span>
-            </div>
-          </div>
-          <div class="sleep-hero-visual">
-            <img src="assets/sleep-hero-photo.png" alt="深度睡眠與腦波修復示意圖" loading="eager" />
-            <div class="sleep-hero-badge">
-              <div class="sleep-hero-badge-ring" style="--pct: 72;">
-                <span>72</span>
-              </div>
-              <div class="sleep-hero-badge-text">
-                <div class="sleep-hero-badge-title">睡眠修復力指標</div>
-                <div class="sleep-hero-badge-note">評估後生成 · 僅供示意</div>
-              </div>
-            </div>
-            <div class="sleep-hero-tagline">無藥舒眠．健康之道</div>
-          </div>
+        <h1 class="page-banner-title">你以為只是失眠，<br/>其實可能是大腦在求救</h1>
+        <p class="page-banner-desc" style="max-width: 620px;">
+          睡不著、淺眠、半夜醒來、越睡越累，常常不只是「生活太忙」。
+          當深度睡眠長期不足，白天的情緒、記憶、專注與恢復力都可能被一起拖垮。
+          納醫芽從腦波、神經節律與整合醫學角度出發，協助你重新找回真正能修復身體的睡眠。
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;">
+          <a href="contact.html" class="btn btn-gold">立即預約睡眠評估</a>
+          <a href="#video-zone" class="btn btn-secondary">先看專題內容</a>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;">
+          <span style="padding:8px 14px; border-radius:999px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); color:white; font-size:0.82rem; font-weight:600;">非侵入性整合支持</span>
+          <span style="padding:8px 14px; border-radius:999px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); color:white; font-size:0.82rem; font-weight:600;">腦波與深度睡眠評估</span>
+          <span style="padding:8px 14px; border-radius:999px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); color:white; font-size:0.82rem; font-weight:600;">客製化睡眠支持規劃</span>
+        </div>
+      </div>
+    </div>
+    <div class="container sleep-hero-badge-row">
+      <div class="sleep-hero-badge">
+        <div class="sleep-hero-badge-ring" style="--pct: 72;">
+          <span>72</span>
+        </div>
+        <div class="sleep-hero-badge-text">
+          <div class="sleep-hero-badge-title">睡眠修復力指標</div>
+          <div class="sleep-hero-badge-note">評估後生成 · 僅供示意</div>
         </div>
       </div>
     </div>
