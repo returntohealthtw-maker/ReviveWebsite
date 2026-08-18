@@ -1,0 +1,17 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="44" x2="1182" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2335"/>
+      <stop offset="1" stop-color="#472066"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" rx="34" fill="url(#bg)"/>
+  <circle cx="640" cy="360" r="84" fill="white" fill-opacity="0.14" stroke="white" stroke-opacity="0.24" stroke-width="2"/>
+  <path d="M615 315L694 360L615 405V315Z" fill="white"/>
+  <text x="90" y="132" fill="#D0E9FF" font-size="26" font-family="'Noto Sans TC', sans-serif">«½a œL§</text>
+  <text x="90" y="210" fill="white" font-size="58" font-weight="800" font-family="'Noto Serif TC', serif">`åºê/1 </text>
+  <text x="90" y="282" fill="white" font-size="58" font-weight="800" font-family="'Noto Serif TC', serif">væïý/'fî©ú†OL</text>
+  <text x="92" y="355" fill="#FFB8DD" font-size="28" font-family="'Noto Sans TC', sans-serif">60-120 Ò¾ïHqGb</text>
+  <rect x="90" y="530" width="360" height="58" rx="29" fill="white" fill-opacity="0.1"/>
+  <text x="122" y="568" fill="white" font-size="26" font-family="'Noto Sans TC', sans-serif">ñ¦a ³ ’ })Ÿý#–Ñ</text>
+</svg>

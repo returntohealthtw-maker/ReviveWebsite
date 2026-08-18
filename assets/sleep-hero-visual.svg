@@ -1,0 +1,52 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="860" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE6F5"/>
+      <stop offset="0.45" stop-color="#EAF7FF"/>
+      <stop offset="1" stop-color="#F6F0FF"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8B3FD0"/>
+      <stop offset="1" stop-color="#B55DFF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="960" height="720" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#7A34B6" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="960" height="720" rx="36" fill="url(#bg)"/>
+  <circle cx="140" cy="108" r="88" fill="#FFC9E6" fill-opacity="0.72"/>
+  <circle cx="818" cy="116" r="94" fill="#BFEAFF" fill-opacity="0.62"/>
+  <circle cx="774" cy="582" r="118" fill="#E5D7FF" fill-opacity="0.8"/>
+  <path d="M0 575C144 519 235 616 340 607C464 597 542 513 661 530C792 549 844 627 960 604V720H0V575Z" fill="white" fill-opacity="0.55"/>
+  <g opacity="0.95">
+    <path d="M45 74C89 44 137 32 197 30C257 28 323 43 388 73" stroke="#A04DE0" stroke-width="6" stroke-linecap="round"/>
+    <path d="M46 102C114 70 188 64 250 78C294 88 331 112 380 140" stroke="#D876C5" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="110" cy="78" r="9" fill="#FF8CCD"/>
+    <circle cx="168" cy="60" r="8" fill="#FFB4D8"/>
+    <circle cx="240" cy="55" r="10" fill="#FFA0CE"/>
+    <circle cx="300" cy="62" r="7" fill="#FFB8DD"/>
+    <circle cx="350" cy="95" r="9" fill="#FFA5D2"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="500" y="120" width="344" height="384" rx="28" fill="white" fill-opacity="0.55"/>
+    <text x="544" y="214" fill="#8B3FD0" font-size="80" font-weight="800" font-family="'Noto Serif TC', serif">!Â </text>
+    <text x="548" y="280" fill="#263949" font-size="22" font-weight="700" font-family="'Noto Sans TC', sans-serif">ìÒ¶a Õ∞_’`ÑÓ©˝õ</text>
+    <rect x="548" y="322" width="254" height="48" rx="24" fill="#7A34B6" fill-opacity="0.12"/>
+    <text x="574" y="353" fill="#7A34B6" font-size="20" font-weight="700" font-family="'Noto Sans TC', sans-serif">aW / ˙  / í / f'</text>
+    <g>
+      <circle cx="570" cy="408" r="10" fill="url(#violet)"/>
+      <text x="592" y="416" fill="#263949" font-size="22" font-family="'Noto Sans TC', sans-serif">AI z˝Éœf‚¢,</text>
+      <circle cx="570" cy="452" r="10" fill="url(#violet)"/>
+      <text x="592" y="460" fill="#263949" font-size="22" font-family="'Noto Sans TC', sans-serif">^ìø¿ö; /</text>
+      <circle cx="570" cy="496" r="10" fill="url(#violet)"/>
+      <text x="592" y="504" fill="#263949" font-size="22" font-family="'Noto Sans TC', sans-serif">^µe'ta èÉ</text>
+    </g>
+  </g>
+  <g transform="translate(70 428)">
+    <rect width="292" height="162" rx="24" fill="#112437" fill-opacity="0.92"/>
+    <text x="28" y="48" fill="#A6C8FF" font-size="18" font-family="'Noto Sans TC', sans-serif">Deep Sleep Signal</text>
+    <path d="M28 111C60 111 61 74 92 74C122 74 123 132 155 132C191 132 186 57 226 57C250 57 259 92 276 92" stroke="#7FD8FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 125H276" stroke="white" stroke-opacity="0.14" stroke-width="2"/>
+    <text x="28" y="147" fill="white" fill-opacity="0.8" font-size="16" font-family="'Noto Sans TC', sans-serif">ûÒ¶a ã})b©õ</text>
+  </g>
+</svg>
