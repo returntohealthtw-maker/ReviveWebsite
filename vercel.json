@@ -7,7 +7,8 @@
     { "source": "/children-program", "destination": "/children-program.html" },
     { "source": "/neurofeedback", "destination": "/neurofeedback.html" },
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/invest", "destination": "/invest.html" }
+    { "source": "/invest", "destination": "/invest.html" },
+    { "source": "/sleep-repair", "destination": "/sleep-repair.html" }
   ],
   "headers": [
     {
