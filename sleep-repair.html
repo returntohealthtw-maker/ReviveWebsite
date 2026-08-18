@@ -74,7 +74,8 @@
       box-shadow: var(--shadow-md);
       border: 1px solid rgba(168,120,210,0.18);
       background: #0f1b2b;
-      aspect-ratio: 4 / 3;
+      height: 100%;
+      min-height: 460px;
     }
     .sleep-hero-visual img {
       width: 100%;
@@ -249,6 +250,8 @@
         grid-template-columns: 1fr !important;
       }
       .sleep-hero-visual {
+        height: auto;
+        min-height: 0;
         aspect-ratio: 3 / 4;
       }
     }
@@ -302,7 +305,7 @@
           <span>睡眠障礙修復專題</span>
         </nav>
         <span class="section-tag" style="margin-bottom: 14px;">Sleep Recovery Program</span>
-        <div class="sleep-hero-grid" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; margin-top: 18px;">
+        <div class="sleep-hero-grid" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: stretch; margin-top: 18px;">
           <div>
             <h1 class="page-banner-title" style="color: var(--primary-dark);">你以為只是失眠，<br/>其實可能是大腦在求救</h1>
             <p class="page-banner-desc" style="max-width: 760px;">
