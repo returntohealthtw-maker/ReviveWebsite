@@ -20,26 +20,40 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      animation: sleepVideoDrift 9s ease-in-out infinite;
       transition: transform 0.4s ease;
     }
+    @keyframes sleepVideoDrift {
+      0%, 100% { transform: scale(1.02) translate(0, 0); }
+      50% { transform: scale(1.08) translate(-1%, -1%); }
+    }
     .sleep-video-thumb:hover img {
-      transform: scale(1.04);
+      transform: scale(1.12);
     }
     .sleep-video-play {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 64px;
-      height: 64px;
+      width: 68px;
+      height: 68px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       color: #4B2268;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      font-size: 1.3rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      animation: sleepPlayPulse 2.6s ease-in-out infinite;
+      transition: transform 0.25s ease;
+    }
+    .sleep-video-thumb:hover .sleep-video-play {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    @keyframes sleepPlayPulse {
+      0%, 100% { box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 0 0 rgba(255,255,255,0.4); }
+      50% { box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 0 14px rgba(255,255,255,0); }
     }
     .sleep-video-duration {
       position: absolute;
@@ -67,11 +81,24 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      animation: sleepHeroBreathe 12s ease-in-out infinite;
+    }
+    @keyframes sleepHeroBreathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    .sleep-hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(10,8,28,0.55) 0%, rgba(10,8,28,0) 35%);
+      pointer-events: none;
     }
     .sleep-hero-tagline {
       position: absolute;
       top: 20px;
       left: 20px;
+      z-index: 2;
       padding: 8px 16px;
       border-radius: 999px;
       background: rgba(15, 27, 43, 0.55);
@@ -84,22 +111,22 @@
     .sleep-hero-badge {
       position: absolute;
       left: 20px;
-      right: 20px;
       bottom: 20px;
+      z-index: 2;
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding: 16px 18px;
-      border-radius: var(--radius-md);
-      background: rgba(255,255,255,0.88);
+      gap: 12px;
+      padding: 10px 16px 10px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(30,10,60,0.18);
+      box-shadow: 0 10px 30px rgba(30,10,60,0.28);
     }
     .sleep-hero-badge-ring {
       --pct: 72;
       position: relative;
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
       flex-shrink: 0;
       border-radius: 50%;
       background: conic-gradient(#8B3FD0 calc(var(--pct) * 1%), #ECE0F7 0);
@@ -110,25 +137,27 @@
     .sleep-hero-badge-ring::before {
       content: "";
       position: absolute;
-      inset: 6px;
+      inset: 5px;
       border-radius: 50%;
       background: #fff;
     }
     .sleep-hero-badge-ring span {
       position: relative;
-      font-size: 1.15rem;
+      font-size: 0.95rem;
       font-weight: 800;
       color: #6C3FA6;
     }
     .sleep-hero-badge-title {
-      font-size: 0.92rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: var(--text-dark);
+      white-space: nowrap;
     }
     .sleep-hero-badge-note {
-      font-size: 0.74rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
-      margin-top: 2px;
+      margin-top: 1px;
+      white-space: nowrap;
     }
 
     .sleep-flow-grid {
@@ -504,11 +533,11 @@
         <div class="section-divider"></div>
       </div>
       <div class="sleep-video-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-        <div style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);">
+        <a href="contact.html" style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); display:block; text-decoration:none; color:inherit;">
           <div class="sleep-video-thumb">
             <img src="assets/sleep-video-cover-1.png" alt="睡眠障礙專題講座精華影片封面" loading="lazy" />
             <span class="sleep-video-play">▶</span>
-            <span class="sleep-video-duration">敬請期待</span>
+            <span class="sleep-video-duration">講座精華預告</span>
           </div>
           <div style="padding: 22px 24px;">
             <div style="font-size:1.08rem; font-weight:700; color:var(--text-dark); margin-bottom:8px;">影片一：睡眠障礙專題講座精華</div>
@@ -516,12 +545,12 @@
               你以為只是失眠，其實可能是大腦修復出了問題——帶你三分鐘看懂深度睡眠不足如何影響白天狀態。
             </div>
           </div>
-        </div>
-        <div style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);">
+        </a>
+        <a href="contact.html" style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); display:block; text-decoration:none; color:inherit;">
           <div class="sleep-video-thumb">
             <img src="assets/sleep-video-cover-2.png" alt="睡眠修復整合方案介紹影片封面" loading="lazy" />
             <span class="sleep-video-play">▶</span>
-            <span class="sleep-video-duration">敬請期待</span>
+            <span class="sleep-video-duration">方案介紹預告</span>
           </div>
           <div style="padding: 22px 24px;">
             <div style="font-size:1.08rem; font-weight:700; color:var(--text-dark); margin-bottom:8px;">影片二：睡眠修復方案介紹</div>
@@ -529,7 +558,7 @@
               睡眠修復不是一招見效，而是評估、掃描、調節、重建的整合支持流程，帶你看懂完整方案。
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <div style="margin-top: 24px; background: linear-gradient(135deg, #7a34b6, #9347d2); color:white; border-radius:var(--radius-lg); box-shadow:var(--shadow-md); padding: 32px 36px; display:flex; align-items:center; justify-content:space-between; gap: 24px; flex-wrap: wrap;">
         <div>
