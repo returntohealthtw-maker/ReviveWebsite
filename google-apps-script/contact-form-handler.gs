@@ -8,6 +8,19 @@
 // 收到新預約時，要同時通知的信箱（多個信箱用逗號分隔）
 var NOTIFY_EMAIL = 'returntohealth.tw@gmail.com';
 
+/**
+ * 授權＋測試用：在 Apps Script 編輯器上方的函式選單選擇 testEmail，按「執行」。
+ * 第一次執行會跳出「需要授權」視窗，授權「寄送電子郵件」後，
+ * returntohealth.tw@gmail.com 會收到一封測試信，代表通知功能已啟用。
+ */
+function testEmail() {
+  MailApp.sendEmail(
+    NOTIFY_EMAIL,
+    '【測試】官網預約通知信設定成功',
+    '收到這封信，代表官網預約表單的 Email 通知功能已經啟用。'
+  );
+}
+
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 
