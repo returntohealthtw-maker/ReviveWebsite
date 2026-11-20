@@ -374,5 +374,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  console.log('納醫芽整合中心 | 永不止息 · Healing Never Ends');
+  console.log('翔禾腦科學發展中心 | 永不止息 · Healing Never Ends');
 });
