@@ -1,5 +1,5 @@
 /* ==========================================
-   納醫芽腦科學與身體機能整合中心 - 主要 JavaScript
+   翔禾腦科學發展中心 - 主要 JavaScript
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
